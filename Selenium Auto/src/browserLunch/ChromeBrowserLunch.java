@@ -12,11 +12,11 @@ public class ChromeBrowserLunch {
 
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://accounts.google.com/ServiceLogin?service");
-
 		driver.navigate().to("https://facebook.com");
 
 		driver.navigate().back();
 		Thread.sleep(4000);
+
 		driver.navigate().refresh();
 		driver.close();
 	}

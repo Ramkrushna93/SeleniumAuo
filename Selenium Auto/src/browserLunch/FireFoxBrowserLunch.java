@@ -9,6 +9,7 @@ public class FireFoxBrowserLunch {
 
 		System.setProperty("webdriver.gecko.driver",
 				"C:\\Users\\USER\\eclipse-workspace\\selenium\\lib\\geckodriver.exe");
+		
 		WebDriver driver = new FirefoxDriver();
 		driver.get("https://facebook.com");
 	}
