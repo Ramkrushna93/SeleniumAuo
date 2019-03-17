@@ -14,17 +14,18 @@ public class AllLinktestOperation {
 		System.setProperty("webdriver.chrome.driver",
 				"C:\\Users\\USER\\eclipse-workspace\\selenium\\lib\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
+
 		driver.get("https://www.google.com/");
-
 		List<WebElement> links;
-		links = driver.findElements(By.tagName("a"));
 
+		links = driver.findElements(By.tagName("a"));
 		System.out.println("no of links " + links.size());
 
 		for (int i = 0; i < links.size(); i++)
 
 		{
 			String Linkname = links.get(i).getText();
+
 			String url = links.get(i).getAttribute("href");
 			System.out.println(Linkname + "-" + url);
 		}

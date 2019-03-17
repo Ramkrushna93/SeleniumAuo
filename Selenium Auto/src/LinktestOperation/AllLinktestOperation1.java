@@ -12,13 +12,16 @@ public class AllLinktestOperation1 {
 		System.setProperty("webdriver.chrome.driver",
 				"C:\\Users\\USER\\eclipse-workspace\\selenium\\lib\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
+
 		driver.get("https://www.google.com/");
 		List<WebElement> links;
 
 		links = driver.findElements(By.tagName("a"));
 		for (int i = 0; i < links.size(); i++) {
+
 			String linkname = links.get(i).getText();
 			System.out.println("The links name is /" + linkname);
+
 			if (linkname.equalsIgnoreCase("Images")) {
 				links.get(i).click();
 
