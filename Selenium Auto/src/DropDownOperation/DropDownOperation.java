@@ -13,6 +13,7 @@ public class DropDownOperation {
 
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://www.facebook.com/");
+
 		Select s1 = new Select(driver.findElement(By.xpath("//select[@aria-label='Year']")));
 		s1.selectByVisibleText("2000");
 
