@@ -18,11 +18,11 @@ public class MailSendOperation {
 		driver.get(
 				"https://accounts.google.com/signin/v2/identifier?continue&flowName=GlifWebSignIn&flowEntry=ServiceLogin");
 
-		driver.findElement(By.name("identifier")).sendKeys("ramkrushna740@gmail.com");
+		driver.findElement(By.name("identifier")).sendKeys("");
 		driver.findElement(By.xpath("//*[text()='Next']")).click();
 //		Thread.sleep(3000);
 
-		driver.findElement(By.name("password")).sendKeys("Lichi1993");
+		driver.findElement(By.name("password")).sendKeys("");
 		driver.findElement(By.xpath("//*[text()='Next']")).click();
 		// Thread.sleep(4000);
 
@@ -34,7 +34,7 @@ public class MailSendOperation {
 		driver.findElement(By.xpath("//*[@id=\":kc\"]/div/div")).click();
 //		Thread.sleep(2000);
 
-		driver.findElement(By.name("to")).sendKeys("lipumishra@gmail.com");
+		driver.findElement(By.name("to")).sendKeys("");
 		driver.findElement(By.name("subjectbox")).sendKeys("Taskcomplete");
 		driver.findElement(By.xpath("//div[@aria-label=\"Message Body\"]")).sendKeys("My task is completed");
 
