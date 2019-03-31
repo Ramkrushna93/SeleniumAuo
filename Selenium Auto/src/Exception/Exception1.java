@@ -25,7 +25,7 @@ public class Exception1 {
 			Thread.sleep(4000);
 			driver.findElement(By.partialLinkText("SIGN IN")).click();
 
-			driver.findElement(By.name("identi")).sendKeys("raju626189412@gmail.com");
+			driver.findElement(By.name("identi")).sendKeys("");
 
 			driver.findElement(By.name("identifier")).sendKeys(Keys.ENTER);
 

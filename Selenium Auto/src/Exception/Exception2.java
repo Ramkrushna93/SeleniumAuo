@@ -16,7 +16,7 @@ public class Exception2 {
 			System.out.println("ur mark=" + im);
 		} catch (java.lang.NumberFormatException c) {
 			System.out.println("Don't enter string/special marks");
-			// c.printStackTrace();
+			 c.printStackTrace();
 		}
 
 	}
