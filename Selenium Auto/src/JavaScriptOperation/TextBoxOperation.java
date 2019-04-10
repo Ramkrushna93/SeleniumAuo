@@ -19,8 +19,8 @@ public class TextBoxOperation {
 		driver.get("https://www.facebook.com");
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		
-		js.executeScript("document.getElementById(\'email\').value=\'9668816507\'");
-		js.executeScript("document.getElementById(\"pass\").value=\"Lichi1993\"");
+		js.executeScript("document.getElementById(\'email\').value=\'\'");
+		js.executeScript("document.getElementById(\"pass\").value=\"\"");
 	    
 		//Click on particular element in javascript
 		js.executeScript("document.querySelector(\"input[type='submit']\").click()");
