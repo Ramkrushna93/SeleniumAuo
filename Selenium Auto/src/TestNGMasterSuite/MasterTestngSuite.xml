@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Master Testng Suite">
+  <suite-files>
+  
+     <suite-file path="C:\Users\USER\eclipse-workspace\selenium\SeleniumTutorial\TestNGXmlSuite\TestngSuite.xml"/>
+     <suite-file path="C:\Users\USER\eclipse-workspace\selenium\SeleniumTutorial\TestNGXmlSuite1\Suite1.xml"/>
+     
+  </suite-files>
+</suite> 
