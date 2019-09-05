@@ -23,8 +23,8 @@ public class FreeCmrOperation {
 		driver.manage().deleteAllCookies();
 		
 		driver.get("https://ui.cogmento.com/");
-		driver.findElement(By.name("username")).sendKeys("raju1221293220");
-		driver.findElement(By.name("password")).sendKeys("Lichi1993");
+		driver.findElement(By.name("username")).sendKeys("");
+		driver.findElement(By.name("password")).sendKeys("");
 		driver.findElement(By.name("password")).sendKeys(Keys.ENTER);
 		
 	}
