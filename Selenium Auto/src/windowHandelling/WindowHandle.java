@@ -28,8 +28,8 @@ public class WindowHandle {
 
 			String childwindow = temp[i].toString();
 
-			if (!childwindow.equalsIgnoreCase(parentwindow))
-				;
+			if (!childwindow.equalsIgnoreCase(parentwindow));
+				
 
 			driver.switchTo().window(childwindow);
 
