@@ -12,7 +12,8 @@ public class GmailSendMailOperation {
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://accounts.google.com/signin/v2/identifier?continue");
 
-		driver.findElement(By.xpath("//input[@class='whsOnd zHQkBf'and@aria-label='Email or phone']")).sendKeys("");
+		driver.findElement(By.xpath("//input[@class='whsOnd zHQkBf'and@aria-label='Email or phone']"))
+				.sendKeys("");
 
 		driver.findElement(By.xpath("//span[text()='Next']")).click();
 
@@ -33,7 +34,7 @@ public class GmailSendMailOperation {
 		driver.findElement(By.xpath("//div[@class='T-I J-J5-Ji T-I-KE L3']")).click();
 		Thread.sleep(7000);
 
-		driver.findElement(By.xpath("//*[@name='to']")).sendKeys("");
+		driver.findElement(By.xpath("//*[@name='to']")).sendKeys("raju1221293220@gmail.com");
 
 		driver.findElement(By.xpath("//*[@name='subjectbox']")).sendKeys("Hi, i am raju. HOW R U ALL. ");
 		Thread.sleep(4000);

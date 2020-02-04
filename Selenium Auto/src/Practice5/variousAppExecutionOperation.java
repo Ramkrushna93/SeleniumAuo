@@ -42,9 +42,10 @@ public class variousAppExecutionOperation {
 		driver.manage().timeouts().implicitlyWait(80, TimeUnit.SECONDS);
 		driver.manage().timeouts().pageLoadTimeout(80, TimeUnit.SECONDS);
 
-		driver.get("https://www.amazon.com/");
-		test.log(LogStatus.INFO, "Amazon application is lunch");
+		 driver.get("https://www.amazon.com/");
+		 test.log(LogStatus.INFO, "Amazon application is lunch");
 	}
+
 
 	@Test(priority = 1)
 	public void dropDownHandles() {
@@ -115,12 +116,12 @@ public class variousAppExecutionOperation {
 		System.out.println("Total no of links in page" + linksofpage);
 		test.log(LogStatus.INFO, "Total no of links in page");
 		softassert.assertEquals(true, true);
-
-		List<WebElement> allcheckboxs = driver.findElements(By.xpath("//input[@type=\"checkbox\"]"));
-		System.out.println("Total no of checkboxs in page" + allcheckboxs.size());
-		test.log(LogStatus.INFO, "Total no of checkboxs in page");
+		
+		List<WebElement> allcheckboxs=driver.findElements(By.xpath("//input[@type=\"checkbox\"]"));
+		System.out.println("Total no of checkboxs in page"+allcheckboxs.size());
+		test.log(LogStatus.INFO,"Total no of checkboxs in page");
 		softassert.assertEquals(true, true);
-
+		
 		act.moveToElement(driver.findElement(By.xpath("//div[text()=\"Companies\"]")));
 		act.build().perform();
 		Thread.sleep(2000);
@@ -130,52 +131,50 @@ public class variousAppExecutionOperation {
 		test.log(LogStatus.PASS, "Element clicked");
 		softassert.assertEquals(true, true);
 		softassert.assertAll();
-
-	}
-
+		
+			}
 	@Test(priority = 4)
 	public void airIndiaOperation() throws InterruptedException {
 		driver.get("http://www.airindia.in/");
 
 		driver.findElement(By.xpath("//a[contains(text(),'Book Flight')]")).click();
 		test.log(LogStatus.PASS, "element is clicked");
-
+        
 		WebElement sendvalue = driver.findElement(By.id("from"));
 		sendvalue.sendKeys("che");
 		test.log(LogStatus.PASS, "Data send to textbox");
-
-		List<WebElement> fromallsgs = sendvalue
-				.findElements(By.xpath("//ul[@id=\"ui-id-2\"]//li[@role=\"presentation\"]/a"));
+        
+		List<WebElement> fromallsgs = sendvalue.findElements(By.xpath("//ul[@id=\"ui-id-2\"]//li[@role=\"presentation\"]/a"));
 		System.out.println("Total no of sgs data=" + fromallsgs.size());
-
+		
 		for (int i = 0; i < fromallsgs.size(); i++) {
 			String fromalldataname = fromallsgs.get(i).getText();
 
 			if (fromalldataname.equalsIgnoreCase("Chennai, Chennai International Airport, MAA, India")) {
-			} else {
+			}else {
 				System.out.println("The element is not found");
 
 				fromallsgs.get(i).click();
 				test.log(LogStatus.PASS, "The element is clicked");
 			}
-
+			
 			WebElement sendvalue1 = driver.findElement(By.id("to"));
 			sendvalue1.sendKeys("kol");
 			test.log(LogStatus.PASS, "text send to textbox");
-
-			List<WebElement> toallsgs = sendvalue1
-					.findElements(By.xpath("//ul[@id=\"ui-id-3\"]//li[@role=\"presentation\"]/a"));
+            
+			List<WebElement> toallsgs = sendvalue1.findElements(By.xpath("//ul[@id=\"ui-id-3\"]//li[@role=\"presentation\"]/a"));
 			System.out.println("Total no of sgs data=" + toallsgs.size());
 
 			for (int j = 0; j < toallsgs.size(); j++) {
 				String toallsgsname = toallsgs.get(i).getText();
 
 				if (toallsgsname.contains("Kolkata, Netaji Subhash Chandra Bose International Airport, CCU, India")) {
-				} else {
+				}else {
 					System.out.println("Ghe element is not found");
 					toallsgs.get(i).click();
 
 				}
+				
 
 			}
 

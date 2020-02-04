@@ -38,7 +38,6 @@ public class TastCasesFailScreenShot {
 		
 		System.out.println("ScreenShot is taken");
 		
-		
 
 }
 }}

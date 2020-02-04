@@ -6,9 +6,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class scollingHorizontallyRightSideToLeftSide {
+public class javaScriptMarking {
 	
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String[] args) {
 		
 		System.setProperty("webdriver.chrome.driver","C:\\Users\\USER\\eclipse-workspace\\selenium\\lib\\chromedriver.exe");
 		WebDriver driver=new ChromeDriver();
@@ -16,23 +16,11 @@ public class scollingHorizontallyRightSideToLeftSide {
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		
-		driver.get("https://www.toolsqa.com/iframe-practice-page/");
-		WebElement element=driver.findElement(By.id("IF2"));
+		driver.get("https://www.twoplugs.com/");
 		
-		driver.switchTo().frame(element);
-		Thread.sleep(4000);
-		
-		JavascriptExecutor js=(JavascriptExecutor)driver;
-		js.executeScript("window.scrollBy(document.body.scrollHeight,0)");
-		
-		
-		
-		
-		
-		
-		
-		
-	
+		WebElement marking=driver.findElement(By.xpath("(//a[@class=\"btn border\"])[1]"));
+		JavascriptExecutor js=((JavascriptExecutor) driver);
+		js.executeScript("arguments[0].style.border='3px solid red'",marking);
 	}
 
 }

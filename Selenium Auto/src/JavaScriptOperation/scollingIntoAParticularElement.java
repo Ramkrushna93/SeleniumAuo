@@ -17,11 +17,11 @@ public class scollingIntoAParticularElement {
 
 		driver.get("https://www.facebook.com/");
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-
+		
 		js.executeScript("document.querySelector(\"a[title='Visit our Help Centre.']\").scrollIntoView()");
 		Thread.sleep(3000);
-		js.executeScript("document.querySelector(\"a[title='Visit our Help Centre.']\").click()");
-		driver.close();
+        js.executeScript("document.querySelector(\"a[title='Visit our Help Centre.']\").click()");
+        driver.close();
 	}
 
 }

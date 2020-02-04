@@ -1,11 +1,11 @@
 package JavaScriptOperation;
 
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class generateAlertInTheWebpageOnlyOkAlert {
+public class JavaScriptExecuitorFlashDemo {
 	
 	public static void main(String[] args) {
 		
@@ -14,13 +14,11 @@ public class generateAlertInTheWebpageOnlyOkAlert {
 		
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
+		driver.get("https://www.twoplugs.com/");
 		
-		driver.get("https://www.facebook.com");
-		JavascriptExecutor js=(JavascriptExecutor)driver;
-		js.executeScript("alert('raju generate alert')");
+		WebElement button=driver.findElement(By.xpath("(//a[@class=\\\"btn green\\\"])[1]"));
+		JavaScriptUtils.flash(button, driver);
 		
-		Alert alt=driver.switchTo().alert();
-		alt.accept();
 	}
 
 }

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test name="Test">
+  
+ <parameter name="browser" value="chrome"/>
+ <parameter name="username" value="9668816507"/>
+<parameter name="pwd" value="Lichi1993"/>
+
+    <classes>
+      <class name="TestNG.testngParameterisedOperation"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

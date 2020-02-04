@@ -14,9 +14,9 @@ public class FBFriendRequestOperation {
 
 		driver.get("https://www.facebook.com/");
 
-		driver.findElement(By.xpath("//input[@type='email']")).sendKeys("9668816507");
+		driver.findElement(By.xpath("//input[@type='email']")).sendKeys("");
 
-		driver.findElement(By.xpath("//input[@data-testid='royal_pass']")).sendKeys("Lichi1993");
+		driver.findElement(By.xpath("//input[@data-testid='royal_pass']")).sendKeys("");
 
 		driver.findElement(By.xpath("//input[@value='Log In']")).click();
 		Thread.sleep(7000);

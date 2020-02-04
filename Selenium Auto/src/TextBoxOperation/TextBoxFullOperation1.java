@@ -9,18 +9,33 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class TextBoxFullOperation1 {
 
-	public static void main(String[] args) {
-		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\USER\\eclipse-workspace\\selenium\\lib\\chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
+	public static void main(String[]args)
+	{
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\USER\\eclipse-workspace\\selenium\\lib\\chromedriver.exe");
+		WebDriver driver=new ChromeDriver();
 		driver.get("https://www.amazon.in/");
-
-		WebElement text_box = driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']"));
+		
+		WebElement text_box=driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']"));
 		text_box.clear();
 		text_box.sendKeys("Mobile");
-		String data = text_box.getAttribute("value");
-		System.out.println("The entered data  THE TEXT BOX IS" + data);
-
+		String data=text_box.getAttribute("value");
+		System.out.println("The entered data  THE TEXT BOX IS"+data);
+		
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 }

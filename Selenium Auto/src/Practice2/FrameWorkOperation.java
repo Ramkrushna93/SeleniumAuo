@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class ErameWorkOperation {
+public class FrameWorkOperation {
 
 	public static void main(String[] args) throws InterruptedException {
 		System.setProperty("webdriver.chrome.driver",
@@ -21,9 +21,9 @@ public class ErameWorkOperation {
 
 		driver.get("https://www.freecrm.com/index.html");
 
-		driver.findElement(By.xpath("//input[@name=\"username\"]")).sendKeys("");
+		driver.findElement(By.xpath("//input[@name=\"username\"]")).sendKeys("raju1221293220");
 
-		driver.findElement(By.xpath("//input[@name=\"password\"]")).sendKeys("");
+		driver.findElement(By.xpath("//input[@name=\"password\"]")).sendKeys("Lichi1993");
 		driver.findElement(By.xpath("//input[@value=\"Login\"]")).click();
 
 		List<WebElement> frame = driver.findElements(By.tagName("frame"));

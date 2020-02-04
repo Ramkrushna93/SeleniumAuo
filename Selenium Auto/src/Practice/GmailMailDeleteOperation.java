@@ -14,7 +14,8 @@ public class GmailMailDeleteOperation {
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://accounts.google.com/signin/v2/identifier?continue");
 
-		driver.findElement(By.xpath("//input[@class='whsOnd zHQkBf'and@aria-label='Email or phone']")).sendKeys("");
+		driver.findElement(By.xpath("//input[@class='whsOnd zHQkBf'and@aria-label='Email or phone']"))
+				.sendKeys("");
 
 		driver.findElement(By.xpath("//span[text()='Next']")).click();
 
